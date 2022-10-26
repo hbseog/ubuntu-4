@@ -1,18 +1,21 @@
 #!/bin/bash
 
+if [ $# -eq 0 ]; then
+	echo "Input the nation name!! "
+elif [ $# -ge 2 ]; then
+	echo "This progrem require only one parameter.!!"
+else
 case "$1" in
 	kr)
-		echo "Seoul"
-		;;
+		echo "Seoul";;
 	us)
-		echo "Wasington"
-		;;
+		echo "Wasington";;
 	cn)
-		echo "Beijing"
-		;;
+		echo "Beijing";;
 	jp)
-		echo "Tokyo"
-		;;
+		echo "Tokyo";;
 	*)
-		echo "Input the nation name!! "
+		echo "Your Enter => $1 is not in the list"
 esac
+
+fi
